@@ -1,13 +1,8 @@
-//import "./style.css";
-
-//var var1 = "function(a, b){return d3.ascending(a.State, b.State)}";
-//var var2 = `function(a, b){return d3.ascending(a.Mean_Biden, b.Mean_Biden)}`;
-//var var3 = `function(a, b){return d3.ascending(a.Mean_Trump, b.Mean_Trump)}`;
-//var var4 = d3.csv("data/state_results.csv").sort(function(a, b){return d3.ascending(a.State, b.State);});
+import "./style.css";
 
 const app = {
   dataSource:
-    "https://raw.githubusercontent.com/julbautista/yapa/master/d3plots/data/state_results.csv",
+    "./data/state_results.csv",
   options: [
     {
       label: "Alphabetical",
