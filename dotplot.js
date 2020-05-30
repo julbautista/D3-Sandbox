@@ -5,7 +5,7 @@
 // chartEls - placeholder for globally accessible chart elements
 // chartSpecs - specifications for the chart
 // data - globally accessible data
-// options - for the filter
+// filterOptions - for the filter
 // svgEl - svgEl element
 // ------------------------
 // with the following methods:
@@ -38,7 +38,7 @@ const app = {
     filterElement.addEventListener("change", app.filterChart);
 
     // retrieve attributes from chartSpecs
-    const {margin, width, height} = app.chartSpecs;
+    const {width, height} = app.chartSpecs;
 
     // set app's svgElement
     app.svgEl = d3.select("#my_dataviz").append("svg").attr("width", width).attr("height", height);
@@ -138,13 +138,13 @@ const app = {
      const gy = svg.append("g").call(yAxis);
 
      // make globally accessible
-     app.chartEls = {y, circle, circle2, line, line2, gy};
+     app.chartEls = {y, yAxis, circle, circle2, line, line2, gy};
    },
    updateChart: (order) =>{
      //retrieve from app
      const data = app.data;
      const svg = app.svgEl;
-     const{y,circle,circle2,line,line2,gy} = app.chartEls;
+     const{y, yAxis, circle,circle2,line,line2,gy} = app.chartEls;
 
      const accessor = app.filterOptions[order].value;
 
