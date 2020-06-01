@@ -2,10 +2,15 @@
 const dotplot = {
   chartDrawn : false,
   chartEls : null,
+  // chartSpecs : {
+  //   margin : {top: '1%', right: '6%', bottom: '6%', left: '30%'},//{ top: 10, right: 30, bottom: 30, left: 100 },
+  //   width  : '85%',//450,
+  //   height : '100%'//550
+  // },
   chartSpecs : {
-    margin : { top: 10, right: 30, bottom: 30, left: 100 },
+    margin : { top: 1, right: 30, bottom: 30, left: 100 },
     width  : 450,
-    height : 600
+    height : 550
   },
   dotplot_data : null,
   filterOptions : [
@@ -16,6 +21,7 @@ const dotplot = {
     {label: "Electoral Vote Share", value: (a, b) => d3.ascending(a.ev, b.ev)}
   ],
   svgEl : null,
+  svgLegend: null,
   initialize : async () => {
     // populate form on HTML using filterOptions
     const filterElement = document.querySelector("#filter");
@@ -24,8 +30,20 @@ const dotplot = {
     //use filterChart function whenever form changes
     filterElement.addEventListener("change", dotplot.filterChart);
 
+    //define legends
+    dotplot.svgLegend = d3.select("#my_legend")
+    .append("svg")
+    .attr("viewBox", '0 0 ' + 2*dotplot.chartSpecs.width+ ' '+ 0.04*dotplot.chartSpecs.height )
+    .attr('preserveAspectRatio','xMinYMin meet')
+
     // set app's svgElement
-    dotplot.svgEl = d3.select("#my_dotplot").append("svg").attr("width", dotplot.chartSpecs.width).attr("height", dotplot.chartSpecs.height);
+    dotplot.svgEl = d3.select("#my_dotplot")
+    .append("svg")
+    //.attr("width", dotplot.chartSpecs.width)
+    //.attr("height", dotplot.chartSpecs.height)
+    //.attr("viewBox", '0 0 '+Math.min(width,height)+' '+Math.min(width,height) )
+    .attr("viewBox", '0 0 ' + 2*dotplot.chartSpecs.width+ ' '+ 1.2*dotplot.chartSpecs.height )
+    .attr('preserveAspectRatio','xMinYMin meet');
 
     // fetch data
     const dataSource = "https://raw.githubusercontent.com/julbautista/yapa/master/d3plots/data/state_results.csv";
@@ -68,6 +86,7 @@ const dotplot = {
 
      const yAxis = g => g
            .attr("transform", `translate(${margin.left},0)`)
+           .style("font-size", "65%")
            .call(d3.axisLeft(y).tickSizeOuter(0));
 
      const line = svg.append("g")
@@ -120,6 +139,35 @@ const dotplot = {
 
      // make globally accessible
      dotplot.chartEls = {y, yAxis, circle, circle2, line, line2, gy};
+
+     //create legends
+     const leg_Biden = 0.3*dotplot.chartSpecs.width;
+     const leg_Trump = 0.6*dotplot.chartSpecs.width;
+     const centerheight = 0.021*dotplot.chartSpecs.height;
+     const linelength = 0.06*dotplot.chartSpecs.width;
+
+     const legsvg = dotplot.svgLegend;
+     legsvg.append("circle").attr("cx", leg_Biden).attr("cy",centerheight).attr("r", 2.5).style("fill", "#0015BC").style("opacity", 0.6)
+     legsvg.append("circle").attr("cx", leg_Trump).attr("cy",centerheight).attr("r", 2.5).style("fill", "#FF0000").style("opacity", 0.6)
+     legsvg.append("line")
+           .attr("x1", leg_Biden + 0.5*linelength)
+           .attr("x2", leg_Biden - 0.5*linelength)
+           .attr("y1", centerheight )
+           .attr("y2", centerheight)
+           .attr("stroke", "#0015BC")
+           .attr("stroke-width", "1px")
+           .style("opacity", 0.6);
+     legsvg.append("line")
+           .attr("x1", leg_Trump + 0.5*linelength)
+           .attr("x2", leg_Trump - 0.5*linelength)
+           .attr("y1", centerheight)
+           .attr("y2", centerheight)
+           .attr("stroke", "#FF0000")
+           .attr("stroke-width", "1px")
+           .style("opacity", 0.6);
+     legsvg.append("text").attr("x", leg_Biden +linelength).attr("y", centerheight).text("Biden").style("font-size", "85%").attr("alignment-baseline","middle")
+     legsvg.append("text").attr("x", leg_Trump +linelength).attr("y", centerheight).text("Trump").style("font-size", "85%").attr("alignment-baseline","middle");
+
   },
   updateChart : (sorting_order) => {
     //retrieve from app
@@ -134,26 +182,22 @@ const dotplot = {
     const t = svg.transition().duration(250);
 
     circle.data(data, d => d.State)
-        .order()
         .transition(t)
         .delay((d, i) => i*15)
         .attr("cy", d => y(d.State));
 
     circle2.data(data, d => d.State)
-        .order()
         .transition(t)
         .delay((d, i) => i*15)
         .attr("cy", d => y(d.State));
 
     line.data(data, d => d.State)
-        .order()
         .transition(t)
         .delay((d, i) => i*15)
         .attr("y1", d => y(d.State))
         .attr("y2", d => y(d.State));
 
     line2.data(data, d => d.State)
-        .order()
         .transition(t)
         .delay((d, i) => i*15)
         .attr("y1", d => y(d.State))
