@@ -93,8 +93,8 @@ const histogram = {
      //legends
      svg.append("circle").attr("cx",440).attr("cy",30).attr("r", 6).style("fill", "#0015BC").style("opacity", 0.6)
      svg.append("circle").attr("cx",440).attr("cy",60).attr("r", 6).style("fill", "#FF0000").style("opacity", 0.6)
-     svg.append("text").attr("x", 460).attr("y", 30).text("Biden").style("font-size", "15px").attr("alignment-baseline","middle")
-     svg.append("text").attr("x", 460).attr("y", 60).text("Trump").style("font-size", "15px").attr("alignment-baseline","middle")
+     svg.append("text").attr("x", 460).attr("y", 30).text("Biden Electoral Votes").style("font-size", "15px").attr("alignment-baseline","middle")
+     svg.append("text").attr("x", 460).attr("y", 60).text("Trump Electoral Votes").style("font-size", "15px").attr("alignment-baseline","middle")
 
      svg
        .append("line")

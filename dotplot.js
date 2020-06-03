@@ -141,8 +141,8 @@ const dotplot = {
      dotplot.chartEls = {y, yAxis, circle, circle2, line, line2, gy};
 
      //create legends
-     const leg_Biden = 0.3*dotplot.chartSpecs.width;
-     const leg_Trump = 0.6*dotplot.chartSpecs.width;
+     const leg_Biden = 0.35*dotplot.chartSpecs.width;
+     const leg_Trump = 0.55*dotplot.chartSpecs.width;
      const centerheight = 0.021*dotplot.chartSpecs.height;
      const linelength = 0.06*dotplot.chartSpecs.width;
 
