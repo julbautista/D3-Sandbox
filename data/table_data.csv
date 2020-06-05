@@ -1,52 +1,52 @@
-state,p_biden,cat1,cat2,rank,ev
-Wyoming,0.005,Likely Trump,Trump,14,3
-West Virginia,0.008,Likely Trump,Trump,13,5
-Oklahoma,0.009,Likely Trump,Trump,12,7
-North Dakota,0.01,Likely Trump,Trump,11,3
-Idaho,0.031,Likely Trump,Trump,10,4
-Kentucky,0.037,Likely Trump,Trump,9,8
-South Dakota,0.04,Likely Trump,Trump,8,3
-Alabama,0.049,Likely Trump,Trump,7,9
-Arkansas,0.057,Likely Trump,Trump,6,6
-Tennessee,0.064,Likely Trump,Trump,5,11
-Nebraska,0.065,Likely Trump,Trump,4,5
-Utah,0.117,Lean Trump,Trump,14,6
-Louisiana,0.126,Lean Trump,Trump,13,8
-Montana,0.133,Lean Trump,Trump,12,3
-Kansas,0.137,Lean Trump,Trump,11,6
-Missouri,0.14,Lean Trump,Trump,10,10
-Mississippi,0.16,Lean Trump,Trump,9,6
-Indiana,0.162,Lean Trump,Trump,8,11
-Alaska,0.208,Lean Trump,Trump,7,3
-South Carolina,0.231,Lean Trump,Trump,6,9
-Texas,0.34,Uncertain,Uncertain,14,38
-Iowa,0.354,Uncertain,Uncertain,13,6
-Ohio,0.374,Uncertain,Uncertain,12,18
-Georgia,0.432,Uncertain,Uncertain,11,16
-Wisconsin,0.524,Uncertain,Uncertain,10,10
-Arizona,0.549,Uncertain,Uncertain,9,11
-New Hampshire,0.564,Uncertain,Uncertain,8,4
-Minnesota,0.605,Uncertain,Uncertain,7,10
-Michigan,0.628,Uncertain,Uncertain,6,16
-Maine,0.633,Uncertain,Uncertain,5,4
-North Carolina,0.637,Uncertain,Uncertain,4,15
-Florida,0.683,Uncertain,Uncertain,3,29
-Virginia,0.684,Uncertain,Uncertain,2,13
-Pennsylvania,0.686,Uncertain,Uncertain,1,20
-Nevada,0.698,Uncertain,Uncertain,0,6
-Colorado,0.751,Lean Biden,Biden,14,9
-New Mexico,0.81,Lean Biden,Biden,13,5
-Delaware,0.824,Lean Biden,Biden,12,3
-Oregon,0.825,Lean Biden,Biden,11,7
-Rhode Island,0.872,Lean Biden,Biden,10,4
-Washington,0.877,Lean Biden,Biden,9,12
-Illinois,0.9,Likely Biden,Biden,14,20
-New Jersey,0.922,Likely Biden,Biden,13,14
-Connecticut,0.927,Likely Biden,Biden,12,7
-Vermont,0.965,Likely Biden,Biden,11,3
-Hawaii,0.983,Likely Biden,Biden,10,4
-Maryland,0.983,Likely Biden,Biden,9,10
-New York,0.986,Likely Biden,Biden,8,29
-Massachusetts,0.993,Likely Biden,Biden,7,11
-California,0.997,Likely Biden,Biden,6,55
-District of Columbia,1,Likely Biden,Biden,5,3
+state,p_biden,cat1,cat2,rank,ev,rank2
+Wyoming,0.005,Likely Trump,Trump,14,3,20
+West Virginia,0.008,Likely Trump,Trump,13,5,19
+Oklahoma,0.009,Likely Trump,Trump,12,7,18
+North Dakota,0.01,Likely Trump,Trump,11,3,17
+Idaho,0.031,Likely Trump,Trump,10,4,16
+Kentucky,0.037,Likely Trump,Trump,9,8,15
+South Dakota,0.04,Likely Trump,Trump,8,3,14
+Alabama,0.049,Likely Trump,Trump,7,9,13
+Arkansas,0.057,Likely Trump,Trump,6,6,12
+Tennessee,0.064,Likely Trump,Trump,5,11,11
+Nebraska,0.065,Likely Trump,Trump,4,5,10
+Utah,0.117,Lean Trump,Trump,14,6,9
+Louisiana,0.126,Lean Trump,Trump,13,8,8
+Montana,0.133,Lean Trump,Trump,12,3,7
+Kansas,0.137,Lean Trump,Trump,11,6,6
+Missouri,0.14,Lean Trump,Trump,10,10,5
+Mississippi,0.16,Lean Trump,Trump,9,6,4
+Indiana,0.162,Lean Trump,Trump,8,11,3
+Alaska,0.208,Lean Trump,Trump,7,3,2
+South Carolina,0.231,Lean Trump,Trump,6,9,1
+Texas,0.34,Uncertain,Uncertain,14,38,15
+Iowa,0.354,Uncertain,Uncertain,13,6,14
+Ohio,0.374,Uncertain,Uncertain,12,18,13
+Georgia,0.432,Uncertain,Uncertain,11,16,12
+Wisconsin,0.524,Uncertain,Uncertain,10,10,11
+Arizona,0.549,Uncertain,Uncertain,9,11,10
+New Hampshire,0.564,Uncertain,Uncertain,8,4,9
+Minnesota,0.605,Uncertain,Uncertain,7,10,8
+Michigan,0.628,Uncertain,Uncertain,6,16,7
+Maine,0.633,Uncertain,Uncertain,5,4,6
+North Carolina,0.637,Uncertain,Uncertain,4,15,5
+Florida,0.683,Uncertain,Uncertain,3,29,4
+Virginia,0.684,Uncertain,Uncertain,2,13,3
+Pennsylvania,0.686,Uncertain,Uncertain,1,20,2
+Nevada,0.698,Uncertain,Uncertain,0,6,1
+Colorado,0.751,Lean Biden,Biden,14,9,16
+New Mexico,0.81,Lean Biden,Biden,13,5,15
+Delaware,0.824,Lean Biden,Biden,12,3,14
+Oregon,0.825,Lean Biden,Biden,11,7,13
+Rhode Island,0.872,Lean Biden,Biden,10,4,12
+Washington,0.877,Lean Biden,Biden,9,12,11
+Illinois,0.9,Likely Biden,Biden,14,20,10
+New Jersey,0.922,Likely Biden,Biden,13,14,9
+Connecticut,0.927,Likely Biden,Biden,12,7,8
+Vermont,0.965,Likely Biden,Biden,11,3,7
+Hawaii,0.983,Likely Biden,Biden,10,4,6
+Maryland,0.983,Likely Biden,Biden,9,10,5
+New York,0.986,Likely Biden,Biden,8,29,4
+Massachusetts,0.993,Likely Biden,Biden,7,11,3
+California,0.997,Likely Biden,Biden,6,55,2
+District of Columbia,1,Likely Biden,Biden,5,3,1
